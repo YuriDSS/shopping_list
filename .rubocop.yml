@@ -1,0 +1,17 @@
+require:
+  - rubocop-rake
+  - rubocop-minitest
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-capybara
+
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+
+Layout/LineLength:
+  Max: 240
