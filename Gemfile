@@ -86,3 +86,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'bootstrap', '~> 5.3'
+
+gem 'view_component', '~> 3.12'

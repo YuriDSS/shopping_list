@@ -9,7 +9,7 @@ namespace :code_quality do
 
   SlimLint::RakeTask.new do |task|
     task.config = 'config/slim-lint.yml'
-    task.files = %w[app/views]
+    task.files = %w[app/views app/components]
   end
 end
 

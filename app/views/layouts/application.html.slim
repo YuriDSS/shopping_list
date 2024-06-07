@@ -7,4 +7,8 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_importmap_tags
-  body = yield
+  body
+    #messages.container
+      - flash.each do |key, value|
+        = render AlertComponent.new(type: key, message: value)
+    = yield
