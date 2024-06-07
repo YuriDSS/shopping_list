@@ -49,6 +49,9 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Better views
+gem 'slim-rails', '~> 3.6'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
@@ -74,6 +77,8 @@ group :development do
   gem 'rubocop-performance', '~> 1.21', require: false
   gem 'rubocop-rails', '~> 2.25', require: false
   gem 'rubocop-rake', '~> 0.6.0', require: false
+
+  gem 'slim_lint', '~> 0.27.0'
 end
 
 group :test do
