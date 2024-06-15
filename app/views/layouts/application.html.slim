@@ -1,13 +1,18 @@
 doctype html
 html
   head
-    title ShoppingList
+    title = content_for? (:title) ? yield(:title) : 'ShoppingList'
     meta name='viewport' content='width=device-width,initial-scale=1'
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_importmap_tags
   body
+    nav#navbar
+      = link_to 'Home', root_path
+    nav#breadcrumbs
+      strong Home
+      =yield :breadcrumbs
     #messages.container
       - flash.each do |key, value|
         = render AlertComponent.new(type: key, message: value)
